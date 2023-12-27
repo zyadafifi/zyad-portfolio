@@ -1,0 +1,373 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+  box-sizing: border-box;
+}
+/* -------header------------- */
+body {
+  color: white;
+  background-color: black;
+  min-height: 100vh;
+}
+#header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(images/mobil-background2.png);
+  background-size: cover;
+  background-position: center;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  background-color: black;
+  height: 70px;
+  position: fixed;
+  width: 100%;
+}
+li {
+  color: white;
+  list-style: none;
+}
+#me {
+  display: flex;
+  padding-top: 30px;
+  padding-right: 120px;
+}
+#me li {
+  padding-left: 50px;
+  font-size: 15px;
+}
+a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #ff0066;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width:100%;
+}
+li h1 {
+  font-size: 35px;
+  padding-top: 20px;
+  padding-left: 190px;
+  letter-spacing: 3px;
+}
+span {
+  color: #ff0066;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+    margin-left: 190px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+/* -----------about---------- */
+#about{
+    padding: 80px 0;
+    color: #ababaa;
+    margin-top: 50px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 90%;
+    padding-left: 100px;
+    padding-top: -50px;
+}
+.about-col-2{
+    flex-basis: 60%;
+    margin-top: 20px;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tap-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tap-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tap-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #b54769;
+    
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+  display: block;
+}
+
+#show-certificate{
+  border-radius: 20px;
+  width: 130px;
+  height: 50px;
+  cursor: pointer;
+  background-color:  #ff004f;
+  color: white;
+}
+#hide-certificate{
+  border-radius: 20px;
+  width: 130px;
+  height: 50px;
+  cursor: pointer;
+  background-color:  #ff004f;
+  color: white;
+}
+
+/* -----------services---------- */
+#services{
+  padding: 30px 90px;
+  margin-left: 20px;
+  padding-left: 0;
+}
+.services-list{
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 50px;
+  margin-left: -80px;
+
+}
+#ser-header{
+  margin-left: 210px;
+}
+.services-list div{
+  background: #262626;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 10px;
+  height: 350px;
+  width: 400px;
+  transition: background 0.5s, transform 0.5s;
+}
+.services-list div i{
+  
+  font-size: 50px;
+  margin-bottom: 30px;
+  color: #fffff4;
+}
+.services-list div h2{
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.services-list div a{
+  font-size: 15px;
+  margin-top: 20px;
+  display: inline-block;
+  color: rgb(146, 137, 137);
+}
+.services-list div a:hover{
+  color: white;
+}
+.services-list div:hover{
+  background: #ff004f;
+  transform: translateY(-10px);
+  color: white;
+}
+/* --------------portfolio--------------------- */
+#portfolio{
+  padding: 50px 0;
+}
+.work-list{
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 50px;
+  margin-left: -80px;
+  padding-right: 75px;
+}
+.work{
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  width: 400px;
+  height: 500px;
+  color: white;
+
+}
+.work img{
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.layer{
+  width: 400px;
+  height:0;
+  background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+.layer h3{
+  padding-top: 150px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.sub-title#my-h1{
+  margin-left: 230px;
+}
+.layer a{
+  margin-top: 20px;
+  color: #ff004f;
+  font-size: 18px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+}
+.work:hover img{
+  transform: scale(1.1);
+}
+.work:hover .layer{
+  height: 100%;
+}
+.btn{
+  display: block;
+  margin: 50px auto;
+  margin-left: 800px;
+  width: fit-content;
+  border: 1px solid #ff004f;
+  padding: 14px 50px;
+  border-radius: 6px;
+  transition: background 0.5s;
+}
+.btn:hover{
+  background: #ff004f;
+}
+
+/* ---------------contact------------------ */
+.contact-left{
+  padding-left: 230px;
+  flex-basis: 35%;
+}
+.contact-right{
+  flex-basis: 60%;
+}
+.contact-left p{
+  margin-top: 30px;
+}
+.contact-left p i{
+  color: #ff004f;
+  margin-right: 15px;
+  font-size: 25px;
+}
+.social-icons{
+  margin-top: 30px;
+}
+.social-icons a{
+  font-size: 30px;
+  margin-right: 15px;
+  color: #ababab;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+.social-icons a:hover{
+  color: #ff004f;
+  transform: translateY(-5px);
+}
+.btn2{
+  display: inline-block;
+  background: #ff004f;
+  width: 171.38px;
+  border-radius: 6px;
+  HEIGHT: 48PX;
+  TEXT-ALIGN: center;
+  margin-top: 30px;
+  padding-top: 15px;
+
+}
+.btn2.submit{
+  padding-top: 4px;
+  color: white;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+form input, form textarea{
+  width: 70%;
+  border: 0;
+  outline: none;
+  background: #262626;
+  padding: 15px;
+  margin: 15px 0; 
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+}
+form{
+  padding-top: -10px;
+}
+textarea{
+  height: 170px;
+}
+.copyright{
+  width: 100%;
+  text-align: center;
+  padding-top: 23px;
+  background: black;
+  font-weight: 300;
+  margin-top: 200px;
+  display: block;
+  position: sticky;
+  top: 100%;
+}
